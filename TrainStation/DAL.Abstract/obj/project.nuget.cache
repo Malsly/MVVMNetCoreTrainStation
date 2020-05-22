@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4V8UR/TZ+vpJa1zgjdBgpdPXT3xicOwRWGyRpRGW/3tM9QifJ7vd49FtLkSDe/VqpeVf8T/1YkLHlJX7JXL12A==",
+  "success": true,
+  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

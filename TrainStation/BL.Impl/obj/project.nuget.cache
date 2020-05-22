@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mRPWG3Vu0aeWyaRwXepCU1NkSY54iyQWioig0FS4h4Jf2OJkdPsA8Va37bO3/CD7pVe8FTWiWB/URkjxc6T1kg==",
+  "success": true,
+  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\BL.Impl\\BL.Impl.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

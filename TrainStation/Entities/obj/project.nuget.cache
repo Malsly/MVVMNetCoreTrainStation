@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "e37S9gR3ZQdlj5EBTqiLcWI7huOfUlKAEZJ9ZdzcjkY1dtf0DNDUPalG6Ecd6NIW2V/Etm3ufQsfR0lQcAT8+g==",
+  "success": true,
+  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

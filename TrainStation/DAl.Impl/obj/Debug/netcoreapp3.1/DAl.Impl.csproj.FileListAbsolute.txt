@@ -1,0 +1,9 @@
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.csprojAssemblyReference.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.csproj.CoreCompileInputs.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.AssemblyInfoInputs.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.AssemblyInfo.cs
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAl.Impl.deps.json
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAl.Impl.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAL.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAL.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.csproj.CopyComplete

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "DAl.Impl/1.0.0": {
+        "dependencies": {
+          "DAL.Abstract": "1.0.0"
+        },
+        "runtime": {
+          "DAl.Impl.dll": {}
+        }
+      },
+      "DAL.Abstract/1.0.0": {
+        "runtime": {
+          "DAL.Abstract.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DAl.Impl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DAL.Abstract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

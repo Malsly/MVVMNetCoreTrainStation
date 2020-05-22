@@ -1,0 +1,4 @@
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.csprojAssemblyReference.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.csproj.CoreCompileInputs.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.AssemblyInfoInputs.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.AssemblyInfo.cs

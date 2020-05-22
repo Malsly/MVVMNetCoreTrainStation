@@ -1,0 +1,9 @@
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\bin\Debug\netcoreapp3.1\DAL.Abstract.deps.json
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\bin\Debug\netcoreapp3.1\DAL.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\bin\Debug\netcoreapp3.1\DAL.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.csprojAssemblyReference.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.csproj.CoreCompileInputs.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.AssemblyInfoInputs.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.AssemblyInfo.cs
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.pdb
