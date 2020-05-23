@@ -6,3 +6,7 @@ D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.AssemblyInfo.cs
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.dll
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.csprojAssemblyReference.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\bin\Debug\netcoreapp3.1\Entities.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAL.Abstract\obj\Debug\netcoreapp3.1\DAL.Abstract.csproj.CopyComplete

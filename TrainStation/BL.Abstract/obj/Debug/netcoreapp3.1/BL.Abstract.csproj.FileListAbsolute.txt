@@ -6,3 +6,4 @@ D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Abstract\obj\Debug\netcoreapp3.1\BL.A
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.AssemblyInfo.cs
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.dll
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Abstract\obj\Debug\netcoreapp3.1\BL.Abstract.csprojAssemblyReference.cache

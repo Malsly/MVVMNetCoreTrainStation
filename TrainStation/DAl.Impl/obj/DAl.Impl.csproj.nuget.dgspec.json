@@ -26,7 +26,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -110,6 +114,22 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.4, )"
             }
           },
           "imports": [
@@ -163,11 +183,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {
-              "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj": {
-                "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
