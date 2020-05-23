@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Impl.EFCore
 {
-    class EfCoreSeatRepository : EfCoreRepository<Seat, TrainStationContext>
+    public class EfCoreSeatRepository : EfCoreRepository<Seat, TrainStationContext>
     {
         public EfCoreSeatRepository(TrainStationContext context) : base(context)
         {

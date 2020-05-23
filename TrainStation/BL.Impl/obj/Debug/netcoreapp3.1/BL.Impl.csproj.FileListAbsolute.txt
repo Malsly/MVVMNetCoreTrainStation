@@ -2,3 +2,11 @@ D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.csproj.CoreCompileInputs.cache
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.AssemblyInfoInputs.cache
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.AssemblyInfo.cs
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\BL.Impl.deps.json
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\BL.Impl.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\BL.Impl.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\BL.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\BL.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.csproj.CopyComplete
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.pdb

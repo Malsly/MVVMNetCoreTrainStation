@@ -7,3 +7,8 @@ D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAl.Imp
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAL.Abstract.dll
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAL.Abstract.pdb
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.csproj.CopyComplete
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAl.Impl.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\Entities.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.pdb

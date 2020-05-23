@@ -6,7 +6,7 @@ using System.Text;
 
 namespace DAL.Impl
 {
-    class TrainStationContext : DbContext
+    public class TrainStationContext : DbContext
     {
         public TrainStationContext(DbContextOptions<TrainStationContext> options)
             : base(options)

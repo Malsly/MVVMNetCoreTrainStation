@@ -2,3 +2,11 @@ D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entitie
 D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CoreCompileInputs.cache
 D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfoInputs.cache
 D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\bin\Debug\netcoreapp3.1\Entities.deps.json
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\bin\Debug\netcoreapp3.1\Entities.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\bin\Debug\netcoreapp3.1\DAL.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\bin\Debug\netcoreapp3.1\DAL.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.csproj.CopyComplete
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
