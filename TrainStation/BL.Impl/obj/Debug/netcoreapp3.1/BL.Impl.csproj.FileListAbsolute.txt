@@ -10,3 +10,11 @@ D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\BL.Abstr
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.csproj.CopyComplete
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.dll
 D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\obj\Debug\netcoreapp3.1\BL.Impl.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\DAL.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\DAl.Impl.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\Entities.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\Models.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\DAl.Impl.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\DAL.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\Entities.pdb
+D:\univer\AAA\PRKZ\KekWait\TrainStation\BL.Impl\bin\Debug\netcoreapp3.1\Models.pdb

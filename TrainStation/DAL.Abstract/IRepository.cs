@@ -7,11 +7,10 @@ namespace DAL.Abstract
 {
     public interface IRepository<T> where T : class, IEntity
     {
-        IEnumerable<T> GetAll();
-        T GetByID(int Id);
-        void Insert(T entity);
-        void Delete(int Id);
-        void Update(T student);
-        void Save();
+        Task<List<T>> GetAll();
+        Task<T> Get(int id);
+        Task<T> Add(T entity);
+        Task<T> Update(T entity);
+        Task<T> Delete(int id);
     }
 }

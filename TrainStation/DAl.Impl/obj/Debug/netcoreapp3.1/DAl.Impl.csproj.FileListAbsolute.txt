@@ -15,3 +15,5 @@ D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAl.Imp
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\DAl.Impl.runtimeconfig.dev.json
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.genruntimeconfig.cache
 D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\obj\Debug\netcoreapp3.1\DAl.Impl.csproj.CoreCompileInputs.cache
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\Models.dll
+D:\univer\AAA\PRKZ\KekWait\TrainStation\DAl.Impl\bin\Debug\netcoreapp3.1\Models.pdb
