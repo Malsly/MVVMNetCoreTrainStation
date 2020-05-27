@@ -456,6 +456,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj": {
+                "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj"
+              },
               "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Impl\\BL.Impl.csproj": {
                 "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Impl\\BL.Impl.csproj"
               },

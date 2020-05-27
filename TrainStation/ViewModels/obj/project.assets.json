@@ -5437,6 +5437,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BL.Abstract >= 1.0.0",
       "BL.Impl >= 1.0.0",
       "Models >= 1.0.0"
     ]
@@ -5467,6 +5468,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj"
+            },
             "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Impl\\BL.Impl.csproj": {
               "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Impl\\BL.Impl.csproj"
             },
