@@ -1,4 +1,5 @@
-﻿using BL.Impl;
+﻿using BL.Abstract;
+using BL.Impl;
 using Entities;
 using System;
 using System.Collections.ObjectModel;
@@ -8,7 +9,8 @@ namespace ViewModels
 {
     public class SeatViewModel
     {
-
+        ISeatService seatService;
+        
         public ObservableCollection<SeatDTO> Students
         {
             get;
@@ -17,9 +19,8 @@ namespace ViewModels
 
         public void LoadSeats()
         {
+            seatService = new SeatService();
             ObservableCollection<SeatDTO> students = new ObservableCollection<SeatDTO>();
-
-            var seatService = new SeatService();
 
             foreach (SeatDTO seat in seatService.GetAll().Data.ToList<SeatDTO>()) students.Add(seat);
 

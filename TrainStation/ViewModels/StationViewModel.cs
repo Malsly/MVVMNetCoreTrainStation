@@ -1,4 +1,5 @@
-﻿using BL.Impl;
+﻿using BL.Abstract;
+using BL.Impl;
 using Entities;
 using System;
 using System.Collections.ObjectModel;
@@ -8,7 +9,7 @@ namespace ViewModels
 {
     public class StationViewModel
     {
-
+        IStationService stationService;
         public ObservableCollection<StationDTO> Stations
         {
             get;
@@ -23,10 +24,9 @@ namespace ViewModels
 
         public void LoadStations()
         {
+            stationService = new StationService();
             ObservableCollection<StationDTO> stations = new ObservableCollection<StationDTO>();
-
-            var stationService = new StationService();
-
+            
             foreach (StationDTO station in stationService.GetAll().Data.ToList<StationDTO>()) stations.Add(station);
 
             Stations = stations;
