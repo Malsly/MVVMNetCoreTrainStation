@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly SeatMapper Mapper;
         readonly GenericRepository<Seat> Repo;
 
-        public SeatService(UnitOfWork unitOfWork)
+        public SeatService()
         {
-            Repo = unitOfWork.Seats;
+            Repo = new UnitOfWork().Seats;
             Mapper = new SeatMapper(Repo);
         }
 

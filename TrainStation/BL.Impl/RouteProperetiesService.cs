@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly RouteProperetiesMapper Mapper;
         readonly GenericRepository<RoutePropereties> Repo;
 
-        public RouteProperetiesService(UnitOfWork unitOfWork)
+        public RouteProperetiesService()
         {
-            Repo = unitOfWork.RoutePropereties;
+            Repo = new UnitOfWork().RoutePropereties;
             Mapper = new RouteProperetiesMapper(Repo);
         }
 

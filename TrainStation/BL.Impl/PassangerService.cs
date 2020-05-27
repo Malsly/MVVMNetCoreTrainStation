@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly PassangerMapper Mapper;
         readonly GenericRepository<Passanger> Repo;
 
-        public PassangerService(UnitOfWork unitOfWork)
+        public PassangerService()
         {
-            Repo = unitOfWork.Passangers;
+            Repo = new UnitOfWork().Passangers;
             Mapper = new PassangerMapper(Repo);
         }
 

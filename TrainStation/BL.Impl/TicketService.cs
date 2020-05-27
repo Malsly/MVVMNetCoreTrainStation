@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly TicketMapper Mapper;
         readonly GenericRepository<Ticket> Repo;
 
-        public TicketService(UnitOfWork unitOfWork)
+        public TicketService()
         {
-            Repo = unitOfWork.Tickets;
+            Repo = new UnitOfWork().Tickets;
             Mapper = new TicketMapper(Repo);
         }
 

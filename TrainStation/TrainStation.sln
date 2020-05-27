@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainStation", "TrainStation\TrainStation.csproj", "{2D8C7248-AC36-4E8B-B7D0-FE5069206D3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModels", "ViewModels\ViewModels.csproj", "{EC475A53-47BB-401C-92EF-B6E6F0299E73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{2D8C7248-AC36-4E8B-B7D0-FE5069206D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D8C7248-AC36-4E8B-B7D0-FE5069206D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D8C7248-AC36-4E8B-B7D0-FE5069206D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC475A53-47BB-401C-92EF-B6E6F0299E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC475A53-47BB-401C-92EF-B6E6F0299E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC475A53-47BB-401C-92EF-B6E6F0299E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC475A53-47BB-401C-92EF-B6E6F0299E73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

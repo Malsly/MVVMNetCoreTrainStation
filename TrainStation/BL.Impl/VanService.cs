@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly VanMapper Mapper;
         readonly GenericRepository<Van> Repo;
 
-        public VanService(UnitOfWork unitOfWork)
+        public VanService()
         {
-            Repo = unitOfWork.Vans;
+            Repo = new UnitOfWork().Vans;
             Mapper = new VanMapper(Repo);
         }
 

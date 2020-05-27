@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly StationMapper Mapper;
         readonly GenericRepository<Station> Repo;
 
-        public StationService(UnitOfWork unitOfWork)
+        public StationService()
         {
-            Repo = unitOfWork.Stations;
+            Repo = new UnitOfWork().Stations;
             Mapper = new StationMapper(Repo);
         }
 

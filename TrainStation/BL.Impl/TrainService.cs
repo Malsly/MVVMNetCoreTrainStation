@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly TrainMapper Mapper;
         readonly GenericRepository<Train> Repo;
 
-        public TrainService(UnitOfWork unitOfWork)
+        public TrainService()
         {
-            Repo = unitOfWork.Trains;
+            Repo = new UnitOfWork().Trains;
             Mapper = new TrainMapper(Repo);
         }
 

@@ -20,9 +20,9 @@ namespace BL.Impl
         readonly ClassProperetiesMapper Mapper;
         readonly GenericRepository<ClassPropereties> Repo;
 
-        public ClassProperetiesService(UnitOfWork unitOfWork)
+        public ClassProperetiesService()
         {
-            Repo = unitOfWork.ClassPropereties;
+            Repo = new UnitOfWork().ClassPropereties;
             Mapper = new ClassProperetiesMapper(Repo);
         }
 

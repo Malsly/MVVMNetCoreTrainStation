@@ -56,29 +56,29 @@ namespace TrainStation
             ConfigureServices(serviceCollection);
 
             
-            var UoW = new UnitOfWork();
+            //var UoW = new UnitOfWork();
             
-            var seatService = new SeatService(UoW);
-            var data = seatService.GetAll();
+            //var seatService = new SeatService(UoW);
+            //var data = seatService.GetAll();
 
-            var vanService = new VanService(UoW);
-            var data1 = vanService.GetAll();
-            var dataSimple = UoW.Vans.Get();
+            //var vanService = new VanService(UoW);
+            //var data1 = vanService.GetAll();
+            //var dataSimple = UoW.Vans.Get();
 
-            var trainService = new TrainService(UoW);
-            var data3 = trainService.GetAll();
+            //var trainService = new TrainService(UoW);
+            //var data3 = trainService.GetAll();
 
-            var stationService = new StationService(UoW);
-            var data4 = stationService.GetAll();
+            //var stationService = new StationService(UoW);
+            //var data4 = stationService.GetAll();
 
-            var passangerService = new PassangerService(UoW);
-            var data5 = passangerService.GetAll();
+            //var passangerService = new PassangerService(UoW);
+            //var data5 = passangerService.GetAll();
 
-            var ticketService = new TicketService(UoW);
-            var data6 = ticketService.GetAll();
+            //var ticketService = new TicketService(UoW);
+            //var data6 = ticketService.GetAll();
 
-            var routePropService = new RouteProperetiesService(UoW);
-            var data7 = routePropService.GetAll();
+            //var routePropService = new RouteProperetiesService(UoW);
+            //var data7 = routePropService.GetAll();
         }
 
         protected override async void OnExit(ExitEventArgs e)
