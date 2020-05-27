@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj": {}
+    "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {}
   },
   "projects": {
-    "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj": {
+    "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj",
+        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj",
+        "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-        "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\obj\\",
+        "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",

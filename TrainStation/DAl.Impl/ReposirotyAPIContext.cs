@@ -9,9 +9,15 @@ namespace ReposirotyAPI.Data
 {
     public class ReposirotyAPIContext : DbContext
     {
-        public ReposirotyAPIContext (DbContextOptions<ReposirotyAPIContext> options)
-        : base(options)
+        public ReposirotyAPIContext ()
+        : base()
         {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var conn = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TrainStaionDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            optionsBuilder.UseSqlServer(conn);
         }
 
         public DbSet<Entities.Seat> Seat { get; set; }

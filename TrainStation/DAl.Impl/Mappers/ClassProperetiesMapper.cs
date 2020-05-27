@@ -1,4 +1,5 @@
 ﻿using DAl.Impl.EFCore;
+using DAl.Impl.Repositories;
 using DAL.Abstract;
 using Entities;
 using System;
@@ -7,18 +8,18 @@ using System.Text;
 
 namespace DAl.Impl.Mappers
 {
-    public class ClassProperetiesMapper : IMapper<ClassPropereties, ClassProperetiesDTO, ClassProperetiesRepository>
+    public class ClassProperetiesMapper : IMapper<ClassPropereties, ClassProperetiesDTO, GenericRepository<ClassPropereties>>
     {
-        public ClassProperetiesRepository repo;
+        public GenericRepository<ClassPropereties> repo;
 
-        public ClassProperetiesMapper(ClassProperetiesRepository repo)
+        public ClassProperetiesMapper(GenericRepository<ClassPropereties> repo)
         {
             this.repo = repo;
         }
 
         public ClassPropereties DeMap(ClassProperetiesDTO dto)
         {
-            ClassPropereties entity = repo.Get(dto.Id).Result;
+            ClassPropereties entity = repo.GetByID(dto.Id);
             if (entity == null)
                 return new ClassPropereties()
                 {

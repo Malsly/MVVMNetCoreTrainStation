@@ -15,7 +15,7 @@ namespace DAl.Impl.Repositories
             var optionsBuilder = new DbContextOptionsBuilder<ReposirotyAPIContext>();
             optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=TrainStaionDatabase;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
-            return new ReposirotyAPIContext(optionsBuilder.Options);
+            return new ReposirotyAPIContext();
         }
     }
 }

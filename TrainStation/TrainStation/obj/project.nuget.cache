@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bahIXPfwjCT0bsXCe37v+d9oxpyot4htU6FfwG0mnqXIc1SHP0W794y6OaS9ZNnDIS/DMOjl8FrtWMw15Nwz6g==",
+  "dgSpecHash": "GnwvHIiCBtvTP2sUPAWfja7i7XI5NIBldmL97BN3SpYmC1cMnGX7wi0MgetfjJ2wdJSXKVzox/bnhzcj9GvJwQ==",
   "success": true,
-  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\TrainStation\\TrainStation.csproj",
+  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\TrainStation\\TrainStation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Макс\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Макс\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

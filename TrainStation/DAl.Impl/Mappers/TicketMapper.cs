@@ -1,4 +1,5 @@
 ﻿using DAl.Impl.EFCore;
+using DAl.Impl.Repositories;
 using DAL.Abstract;
 using Entities;
 using System;
@@ -7,47 +8,37 @@ using System.Text;
 
 namespace DAl.Impl.Mappers
 {
-    public class TicketMapper : IMapper<Ticket, TicketDTO, TicketRepository>
+    public class TicketMapper : IMapper<Ticket, TicketDTO, GenericRepository<Ticket>>
     {
-        public TicketRepository repo;
-        public PassangerMapper passangwerMapper;
-        public VanMapper vanMapper;
-        public TrainMapper trainMapper;
-        public SeatMapper seatMapper;
-        public RouteProperetiesMapper routeProperetiesMapper;
-
-
-        public TicketMapper(TicketRepository repo, PassangerMapper passangwerMapper, VanMapper vanMapper, TrainMapper trainMapper, SeatMapper seatMapper, RouteProperetiesMapper routeProperetiesMapper)
+        public GenericRepository<Ticket> repo;
+        public UnitOfWork.UnitOfWork UoW;
+        
+        public TicketMapper(GenericRepository<Ticket> repo)
         {
             this.repo = repo;
-            this.passangwerMapper = passangwerMapper;
-            this.vanMapper = vanMapper;
-            this.trainMapper = trainMapper;
-            this.seatMapper = seatMapper;
-            this.routeProperetiesMapper = routeProperetiesMapper;
         }
 
         public Ticket DeMap(TicketDTO dto)
         {
-            Ticket entity = repo.Get(dto.Id).Result;
+            Ticket entity = repo.GetByID(dto.Id);
             if (entity == null)
                 return new Ticket()
                 {
                     Id = dto.Id,
                     Price = dto.Price,
-                    Passanger = passangwerMapper.DeMap(dto.Passanger),
-                    Van = vanMapper.DeMap(dto.Van),
-                    Train = trainMapper.DeMap(dto.Train),
-                    Seat = seatMapper.DeMap(dto.Seat),
-                    RoutePropereties = routeProperetiesMapper.DeMap(dto.RoutePropereties)
+                    Passanger = UoW.Passangers.GetByID(dto.PassangerId),
+                    Van = UoW.Vans.GetByID(dto.VanId),
+                    Train = UoW.Trains.GetByID(dto.TrainId),
+                    Seat = UoW.Seats.GetByID(dto.SeatId),
+                    RoutePropereties = UoW.RoutePropereties.GetByID(dto.RouteProperetiesId)
                 };
             entity.Id = dto.Id;
             entity.Price = dto.Price;
-            entity.Passanger = passangwerMapper.DeMap(dto.Passanger);
-            entity.Van = vanMapper.DeMap(dto.Van);
-            entity.Train = trainMapper.DeMap(dto.Train);
-            entity.Seat = seatMapper.DeMap(dto.Seat);
-            entity.RoutePropereties = routeProperetiesMapper.DeMap(dto.RoutePropereties);
+            entity.Passanger = UoW.Passangers.GetByID(dto.PassangerId);
+            entity.Van = UoW.Vans.GetByID(dto.VanId);
+            entity.Train = UoW.Trains.GetByID(dto.TrainId);
+            entity.Seat = UoW.Seats.GetByID(dto.SeatId);
+            entity.RoutePropereties = UoW.RoutePropereties.GetByID(dto.RouteProperetiesId);
             return entity;
         }   
 
@@ -57,11 +48,11 @@ namespace DAl.Impl.Mappers
             {
                 Id = entity.Id,
                 Price = entity.Price,
-                Passanger = passangwerMapper.Map(entity.Passanger),
-                Van = vanMapper.Map(entity.Van),
-                Train = trainMapper.Map(entity.Train),
-                Seat = seatMapper.Map(entity.Seat),
-                RoutePropereties = routeProperetiesMapper.Map(entity.RoutePropereties)
+                PassangerId = entity.PassangerId,
+                VanId = entity.VanId,
+                TrainId = entity.TrainId,
+                SeatId = entity.SeatId,
+                RouteProperetiesId = entity.RouteProperetiesId
             };
         }
     }

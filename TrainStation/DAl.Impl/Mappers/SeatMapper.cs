@@ -1,4 +1,5 @@
 ﻿using DAl.Impl.EFCore;
+using DAl.Impl.Repositories;
 using DAL.Abstract;
 using Entities;
 using System;
@@ -7,18 +8,18 @@ using System.Text;
 
 namespace DAl.Impl.Mappers
 {
-    public class SeatMapper : IMapper<Seat, SeatDTO, SeatRepository>
+    public class SeatMapper : IMapper<Seat, SeatDTO, GenericRepository<Seat>>
     {
-        public SeatRepository repo;
+        public GenericRepository<Seat> repo;
 
-        public SeatMapper(SeatRepository repo)
+        public SeatMapper(GenericRepository<Seat> repo)
         {
             this.repo = repo;
         }
 
         public Seat DeMap(SeatDTO dto)
         {
-            Seat entity = repo.Get(dto.Id).Result;
+            Seat entity = repo.GetByID(dto.Id);
             if (entity == null)
                 return new Seat()
                 {

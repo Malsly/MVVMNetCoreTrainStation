@@ -7,7 +7,7 @@ namespace DAL.Abstract
     public interface IMapper<TEntity, TEntityDTO, Repo>
        where TEntity : class, IEntity
        where TEntityDTO : class
-       where Repo : IRepository<TEntity>
+       where Repo : class
     {
         TEntityDTO Map(TEntity entity);
 

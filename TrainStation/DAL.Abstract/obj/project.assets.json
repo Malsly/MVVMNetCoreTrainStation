@@ -1574,11 +1574,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
+      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
       "projectName": "DAL.Abstract",
-      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
+      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
       "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\obj\\",
+      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1594,8 +1594,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj"
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj"
             }
           }
         }

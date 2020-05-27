@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj",
+      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj",
+      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\obj\\",
+      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",

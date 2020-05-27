@@ -74,7 +74,7 @@ namespace DAl.Impl.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TrainId")
+                    b.Property<int>("TrainId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -132,22 +132,22 @@ namespace DAl.Impl.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("PassangerId")
+                    b.Property<int>("PassangerId")
                         .HasColumnType("int");
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int?>("RouteProperetiesId")
+                    b.Property<int>("RouteProperetiesId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SeatId")
+                    b.Property<int>("SeatId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TrainId")
+                    b.Property<int>("TrainId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("VanId")
+                    b.Property<int>("VanId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -181,7 +181,7 @@ namespace DAl.Impl.Migrations
                     b.Property<string>("PlaceDeparture")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("StationId")
+                    b.Property<int>("StationId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -198,7 +198,7 @@ namespace DAl.Impl.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ClassProperetiesId")
+                    b.Property<int>("ClassProperetiesId")
                         .HasColumnType("int");
 
                     b.Property<int>("Number")
@@ -218,9 +218,11 @@ namespace DAl.Impl.Migrations
 
             modelBuilder.Entity("Entities.RoutePropereties", b =>
                 {
-                    b.HasOne("Entities.Train", null)
+                    b.HasOne("Entities.Train", "Train")
                         .WithMany("RoutePropereties")
-                        .HasForeignKey("TrainId");
+                        .HasForeignKey("TrainId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Entities.Seat", b =>
@@ -234,37 +236,51 @@ namespace DAl.Impl.Migrations
                 {
                     b.HasOne("Entities.Passanger", "Passanger")
                         .WithMany()
-                        .HasForeignKey("PassangerId");
+                        .HasForeignKey("PassangerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Entities.RoutePropereties", "RoutePropereties")
                         .WithMany()
-                        .HasForeignKey("RouteProperetiesId");
+                        .HasForeignKey("RouteProperetiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Entities.Seat", "Seat")
                         .WithMany()
-                        .HasForeignKey("SeatId");
+                        .HasForeignKey("SeatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Entities.Train", "Train")
                         .WithMany()
-                        .HasForeignKey("TrainId");
+                        .HasForeignKey("TrainId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Entities.Van", "Van")
                         .WithMany()
-                        .HasForeignKey("VanId");
+                        .HasForeignKey("VanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Entities.Train", b =>
                 {
-                    b.HasOne("Entities.Station", null)
+                    b.HasOne("Entities.Station", "Station")
                         .WithMany("Trains")
-                        .HasForeignKey("StationId");
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Entities.Van", b =>
                 {
                     b.HasOne("Entities.ClassPropereties", "ClassPropereties")
                         .WithMany()
-                        .HasForeignKey("ClassProperetiesId");
+                        .HasForeignKey("ClassProperetiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Entities.Train", null)
                         .WithMany("Vans")

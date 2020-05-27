@@ -1,4 +1,5 @@
 ﻿
+using BL.Impl;
 using DAl.Impl.EFCore;
 using DAl.Impl.UnitOfWork;
 using DAL.Abstract;
@@ -41,21 +42,6 @@ namespace TrainStation
         private void ConfigureServices(IServiceCollection services)
         {
             // services for DI...
-
-            services.AddDbContext<ReposirotyAPIContext>
-                (options => options.UseSqlServer(Configuration.GetConnectionString("NewTrainStationDatabase")));
-
-            services.AddScoped<SeatRepository>();
-            services.AddScoped<ClassProperetiesRepository>();
-            services.AddScoped<PassangerRepository>();
-            services.AddScoped<RouteProperetiesRepository>();
-            services.AddScoped<StationRepository>();
-            services.AddScoped<TicketRepository>();
-            services.AddScoped<TrainRepository>();
-            services.AddScoped<VanRepository>();
-
-            services.AddScoped<UnitOfWork>();
-
         }
 
         protected override void OnStartup(StartupEventArgs e)
@@ -69,23 +55,30 @@ namespace TrainStation
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
 
-            ServiceProvider = serviceCollection.BuildServiceProvider();
+            
+            var UoW = new UnitOfWork();
+            
+            var seatService = new SeatService(UoW);
+            var data = seatService.GetAll();
 
-            var SeatRepo = ServiceProvider.GetRequiredService<SeatRepository>();
-            var secondData = SeatRepo.GetAll();
+            var vanService = new VanService(UoW);
+            var data1 = vanService.GetAll();
+            var dataSimple = UoW.Vans.Get();
 
-            var StationRepo = ServiceProvider.GetRequiredService<StationRepository>();
-            var staionData = StationRepo.GetAll();
+            var trainService = new TrainService(UoW);
+            var data3 = trainService.GetAll();
 
-            var TrainRepo = ServiceProvider.GetRequiredService<TrainRepository>();
-            var traisOfStation = TrainRepo.GetAll();
+            var stationService = new StationService(UoW);
+            var data4 = stationService.GetAll();
 
-            var RoutesRepo = ServiceProvider.GetRequiredService<RouteProperetiesRepository>();
-            var routeWhatNeded = RoutesRepo.GetAll();
+            var passangerService = new PassangerService(UoW);
+            var data5 = passangerService.GetAll();
 
-            var UoW = ServiceProvider.GetRequiredService<UnitOfWork>();
-            var aaa = UoW.SeatRepository.Get().ToList();
+            var ticketService = new TicketService(UoW);
+            var data6 = ticketService.GetAll();
 
+            var routePropService = new RouteProperetiesService(UoW);
+            var data7 = routePropService.GetAll();
         }
 
         protected override async void OnExit(ExitEventArgs e)

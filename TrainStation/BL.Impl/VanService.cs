@@ -3,6 +3,8 @@ using BL.Abstract.ResultWrappers;
 using BL.Impl.ResultWrappers;
 using DAl.Impl.EFCore;
 using DAl.Impl.Mappers;
+using DAl.Impl.Repositories;
+using DAl.Impl.UnitOfWork;
 using Entities;
 using ReposirotyAPI.Data;
 using System;
@@ -16,19 +18,19 @@ namespace BL.Impl
     {
 
         readonly VanMapper Mapper;
-        readonly VanRepository Repo;
+        readonly GenericRepository<Van> Repo;
 
-        public VanService(ReposirotyAPIContext context, ClassProperetiesMapper classPropsMapper)
+        public VanService(UnitOfWork unitOfWork)
         {
-            Repo = new VanRepository(context);
-            Mapper = new VanMapper(Repo, classPropsMapper);
+            Repo = unitOfWork.Vans;
+            Mapper = new VanMapper(Repo);
         }
 
         public IDataResult<List<VanDTO>> GetAll()
         {
             return new DataResult<List<VanDTO>>()
             {
-                Data = Repo.GetAll().Result.Select(e => Mapper.Map(e)).ToList(),
+                Data = Repo.Get().Select(e => Mapper.Map(e)).ToList(),
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
@@ -38,7 +40,7 @@ namespace BL.Impl
         {
             return new DataResult<VanDTO>()
             {
-                Data = Mapper.Map(Repo.Get(id).Result),
+                Data = Mapper.Map(Repo.GetByID(id)),
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
@@ -46,7 +48,7 @@ namespace BL.Impl
 
         public IResult Add(VanDTO dto)
         {
-            Repo.Add(Mapper.DeMap(dto)).Wait();
+            Repo.Insert(Mapper.DeMap(dto));
             return new Result()
             {
                 Message = ResponseMessageType.None,
@@ -56,7 +58,7 @@ namespace BL.Impl
 
         public IResult Update(VanDTO dto)
         {
-            Repo.Update(Mapper.DeMap(dto)).Wait();
+            Repo.Update(Mapper.DeMap(dto));
             return new Result()
             {
                 Message = ResponseMessageType.None,
@@ -66,7 +68,7 @@ namespace BL.Impl
 
         public IResult Delete(int id)
         {
-            Repo.Delete(id).Wait();
+            Repo.Delete(id);
             return new Result()
             {
                 Message = ResponseMessageType.None,

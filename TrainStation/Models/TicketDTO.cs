@@ -9,10 +9,10 @@ namespace Entities
     {
         public int Id { get; set; }
         public int Price { get; set; }
-        public PassangerDTO Passanger { get; set; }
-        public VanDTO Van { get; set; }
-        public TrainDTO Train { get; set; }
-        public SeatDTO Seat { get; set; }
-        public RouteProperetiesDTO RoutePropereties { get; set; }
+        public int PassangerId { get; set; }
+        public int VanId { get; set; }
+        public int TrainId { get; set; }
+        public int SeatId { get; set; }
+        public int RouteProperetiesId { get; set; }
     }
 }

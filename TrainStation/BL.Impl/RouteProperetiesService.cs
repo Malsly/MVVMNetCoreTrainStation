@@ -3,6 +3,8 @@ using BL.Abstract.ResultWrappers;
 using BL.Impl.ResultWrappers;
 using DAl.Impl.EFCore;
 using DAl.Impl.Mappers;
+using DAl.Impl.Repositories;
+using DAl.Impl.UnitOfWork;
 using Entities;
 using ReposirotyAPI.Data;
 using System;
@@ -16,11 +18,11 @@ namespace BL.Impl
     {
 
         readonly RouteProperetiesMapper Mapper;
-        readonly RouteProperetiesRepository Repo;
+        readonly GenericRepository<RoutePropereties> Repo;
 
-        public RouteProperetiesService(ReposirotyAPIContext context)
+        public RouteProperetiesService(UnitOfWork unitOfWork)
         {
-            Repo = new RouteProperetiesRepository(context);
+            Repo = unitOfWork.RoutePropereties;
             Mapper = new RouteProperetiesMapper(Repo);
         }
 
@@ -28,7 +30,7 @@ namespace BL.Impl
         {
             return new DataResult<List<RouteProperetiesDTO>>()
             {
-                Data = Repo.GetAll().Result.Select(e => Mapper.Map(e)).ToList(),
+                Data = Repo.Get().Select(e => Mapper.Map(e)).ToList(),
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
@@ -38,7 +40,7 @@ namespace BL.Impl
         {
             return new DataResult<RouteProperetiesDTO>()
             {
-                Data = Mapper.Map(Repo.Get(id).Result),
+                Data = Mapper.Map(Repo.GetByID(id)),
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
@@ -46,7 +48,7 @@ namespace BL.Impl
 
         public IResult Add(RouteProperetiesDTO dto)
         {
-            Repo.Add(Mapper.DeMap(dto)).Wait();
+            Repo.Insert(Mapper.DeMap(dto));
             return new Result()
             {
                 Message = ResponseMessageType.None,
@@ -56,7 +58,7 @@ namespace BL.Impl
 
         public IResult Update(RouteProperetiesDTO dto)
         {
-            Repo.Update(Mapper.DeMap(dto)).Wait();
+            Repo.Update(Mapper.DeMap(dto));
             return new Result()
             {
                 Message = ResponseMessageType.None,
@@ -66,7 +68,7 @@ namespace BL.Impl
 
         public IResult Delete(int id)
         {
-            Repo.Delete(id).Wait();
+            Repo.Delete(id);
             return new Result()
             {
                 Message = ResponseMessageType.None,

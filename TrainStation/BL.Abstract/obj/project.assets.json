@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\BL.Abstract\\BL.Abstract.csproj",
+      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj",
       "projectName": "BL.Abstract",
-      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\BL.Abstract\\BL.Abstract.csproj",
+      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj",
       "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\BL.Abstract\\obj\\",
+      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,8 +52,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj": {
-              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj"
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj"
             }
           }
         }

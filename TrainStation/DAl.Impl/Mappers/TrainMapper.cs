@@ -1,4 +1,5 @@
 ﻿using DAl.Impl.EFCore;
+using DAl.Impl.Repositories;
 using DAL.Abstract;
 using Entities;
 using System;
@@ -7,26 +8,24 @@ using System.Text;
 
 namespace DAl.Impl.Mappers
 {
-    public class TrainMapper : IMapper<Train, TrainDTO, TrainRepository>
+    public class TrainMapper : IMapper<Train, TrainDTO, GenericRepository<Train>>
     {
-        public TrainRepository repo;
-        public RouteProperetiesMapper routeProperetiesMapper;
+        public GenericRepository<Train> repo;
+        private UnitOfWork.UnitOfWork UoW;
         public List<RoutePropereties> routePropListEntity;
         public List<RouteProperetiesDTO> routePropListDTO;
-
-        public TrainMapper(TrainRepository repo, RouteProperetiesMapper routeProperetiesMapper)
+        
+        public TrainMapper(GenericRepository<Train> repo)
         {
             this.repo = repo;
-            this.routeProperetiesMapper = routeProperetiesMapper;
-            this.routePropListEntity = new List<RoutePropereties>();
-            this.routePropListDTO = new List<RouteProperetiesDTO>();
         }
 
         public Train DeMap(TrainDTO dto)
         {
-            Train entity = repo.Get(dto.Id).Result;
+            Train entity = repo.GetByID(dto.Id);
+            routePropListEntity = new List<RoutePropereties>();
             if (entity == null) {
-                foreach (RouteProperetiesDTO rpd in dto.RoutePropereties) routePropListEntity.Add(routeProperetiesMapper.DeMap(rpd));
+                foreach (RouteProperetiesDTO rpd in dto.RoutePropereties) routePropListEntity.Add(new RoutePropereties() { Id = rpd.Id, Price = rpd.Price, Place = rpd.Place, Date = rpd.Date });
                 return new Train()
                 {
                     PlaceDeparture = dto.PlaceDeparture,
@@ -39,14 +38,21 @@ namespace DAl.Impl.Mappers
             entity.PlaceDeparture = dto.PlaceDeparture;
             entity.PlaceArrival = dto.PlaceArrival;
             entity.Name = dto.Name;
-            foreach (RouteProperetiesDTO rpd in dto.RoutePropereties) entity.RoutePropereties.Add(routeProperetiesMapper.DeMap(rpd));
+            foreach (RouteProperetiesDTO rpd in dto.RoutePropereties) entity.RoutePropereties.Add(new RoutePropereties() { Id = rpd.Id, Price = rpd.Price, Place = rpd.Place, Date = rpd.Date });
             entity.Id = dto.Id;
             return entity;
         }
 
         public TrainDTO Map(Train entity)
         {
-            foreach (RoutePropereties rpd in entity.RoutePropereties) routePropListDTO.Add(routeProperetiesMapper.Map(rpd));
+            UoW = new UnitOfWork.UnitOfWork();
+            routePropListDTO = new List<RouteProperetiesDTO>();
+            foreach (RoutePropereties rpd in UoW.RoutePropereties.Get()) {
+                if (rpd.TrainId == entity.Id) 
+                {
+                    routePropListDTO.Add(new RouteProperetiesDTO() { Id = rpd.Id, Price = rpd.Price, Place = rpd.Place, Date = rpd.Date });
+                }
+            }
             return new TrainDTO()
             {
                 PlaceDeparture = entity.PlaceDeparture,

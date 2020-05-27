@@ -1,4 +1,5 @@
 ﻿using DAl.Impl.EFCore;
+using DAl.Impl.Repositories;
 using DAL.Abstract;
 using Entities;
 using System;
@@ -7,18 +8,18 @@ using System.Text;
 
 namespace DAl.Impl.Mappers
 {
-    public class PassangerMapper : IMapper<Passanger, PassangerDTO, PassangerRepository>
+    public class PassangerMapper : IMapper<Passanger, PassangerDTO, GenericRepository<Passanger>>
     {
-        public PassangerRepository repo;
+        public GenericRepository<Passanger> repo;
 
-        public PassangerMapper(PassangerRepository repo)
+        public PassangerMapper(GenericRepository<Passanger> repo)
         {
             this.repo = repo;
         }
 
         public Passanger DeMap(PassangerDTO dto)
         {
-            Passanger entity = repo.Get(dto.Id).Result;
+            Passanger entity = repo.GetByID(dto.Id);
             if (entity == null)
                 return new Passanger()
                 {

@@ -3,6 +3,8 @@ using BL.Abstract.ResultWrappers;
 using BL.Impl.ResultWrappers;
 using DAl.Impl.EFCore;
 using DAl.Impl.Mappers;
+using DAl.Impl.Repositories;
+using DAl.Impl.UnitOfWork;
 using Entities;
 using ReposirotyAPI.Data;
 using System;
@@ -16,19 +18,19 @@ namespace BL.Impl
     {
 
         readonly TrainMapper Mapper;
-        readonly TrainRepository Repo;
+        readonly GenericRepository<Train> Repo;
 
-        public TrainService(ReposirotyAPIContext context, RouteProperetiesMapper routePropsMapper)
+        public TrainService(UnitOfWork unitOfWork)
         {
-            Repo = new TrainRepository(context);
-            Mapper = new TrainMapper(Repo, routePropsMapper);
+            Repo = unitOfWork.Trains;
+            Mapper = new TrainMapper(Repo);
         }
 
         public IDataResult<List<TrainDTO>> GetAll()
         {
             return new DataResult<List<TrainDTO>>()
             {
-                Data = Repo.GetAll().Result.Select(e => Mapper.Map(e)).ToList(),
+                Data = Repo.Get().Select(e => Mapper.Map(e)).ToList(),
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
@@ -38,7 +40,7 @@ namespace BL.Impl
         {
             return new DataResult<TrainDTO>()
             {
-                Data = Mapper.Map(Repo.Get(id).Result),
+                Data = Mapper.Map(Repo.GetByID(id)),
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
@@ -46,7 +48,7 @@ namespace BL.Impl
 
         public IResult Add(TrainDTO dto)
         {
-            Repo.Add(Mapper.DeMap(dto)).Wait();
+            Repo.Insert(Mapper.DeMap(dto));
             return new Result()
             {
                 Message = ResponseMessageType.None,
@@ -56,7 +58,7 @@ namespace BL.Impl
 
         public IResult Update(TrainDTO dto)
         {
-            Repo.Update(Mapper.DeMap(dto)).Wait();
+            Repo.Update(Mapper.DeMap(dto));
             return new Result()
             {
                 Message = ResponseMessageType.None,
@@ -66,7 +68,7 @@ namespace BL.Impl
 
         public IResult Delete(int id)
         {
-            Repo.Delete(id).Wait();
+            Repo.Delete(id);
             return new Result()
             {
                 Message = ResponseMessageType.None,

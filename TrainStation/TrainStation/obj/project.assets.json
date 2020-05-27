@@ -1626,6 +1626,33 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "BL.Abstract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BL.Abstract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.Abstract.dll": {}
+        }
+      },
+      "BL.Impl/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "BL.Abstract": "1.0.0",
+          "DAl.Impl": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BL.Impl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BL.Impl.dll": {}
+        }
+      },
       "DAL.Abstract/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5972,6 +5999,16 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "BL.Abstract/1.0.0": {
+      "type": "project",
+      "path": "../BL.Abstract/BL.Abstract.csproj",
+      "msbuildProject": "../BL.Abstract/BL.Abstract.csproj"
+    },
+    "BL.Impl/1.0.0": {
+      "type": "project",
+      "path": "../BL.Impl/BL.Impl.csproj",
+      "msbuildProject": "../BL.Impl/BL.Impl.csproj"
+    },
     "DAL.Abstract/1.0.0": {
       "type": "project",
       "path": "../DAL.Abstract/DAL.Abstract.csproj",
@@ -5995,6 +6032,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BL.Impl >= 1.0.0",
       "DAl.Impl >= 1.0.0",
       "EntityFramework >= 6.4.4",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.4",
@@ -6013,11 +6051,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\TrainStation\\TrainStation.csproj",
+      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\TrainStation\\TrainStation.csproj",
       "projectName": "TrainStation",
-      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\TrainStation\\TrainStation.csproj",
+      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\TrainStation\\TrainStation.csproj",
       "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\TrainStation\\obj\\",
+      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\TrainStation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6033,8 +6071,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAl.Impl\\DAl.Impl.csproj": {
-              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAl.Impl\\DAl.Impl.csproj"
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Impl\\BL.Impl.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Impl\\BL.Impl.csproj"
+            },
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj"
             }
           }
         }

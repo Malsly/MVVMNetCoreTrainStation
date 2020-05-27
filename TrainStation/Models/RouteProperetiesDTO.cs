@@ -11,5 +11,7 @@ namespace Entities
         public int Price {get; set; }
         public string Place { get; set; }
         public DateTime Date { get; set; }
+        public int TrainId { get; set; }
+
     }
 }

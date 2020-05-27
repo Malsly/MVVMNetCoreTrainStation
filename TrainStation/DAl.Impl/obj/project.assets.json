@@ -5461,11 +5461,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
+      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
       "projectName": "DAl.Impl",
-      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
+      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
       "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAl.Impl\\obj\\",
+      "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5481,14 +5481,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj": {
-              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj"
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj"
             },
-            "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj": {
-              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Entities\\Entities.csproj"
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj"
             },
-            "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj": {
-              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\TrainStation\\Models\\Models.csproj"
+            "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {
+              "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj"
             }
           }
         }
