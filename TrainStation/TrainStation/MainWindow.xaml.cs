@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ViewModels;
+
+using ViewModels.Impl;
 
 namespace TrainStation
 {
@@ -26,6 +27,7 @@ namespace TrainStation
         {
             InitializeComponent();
             stationViewModel = new StationViewModel();
+            this.DataContext = stationViewModel;
         }
     }
 }

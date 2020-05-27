@@ -5448,9 +5448,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\ViewModels\\ViewModels.csproj",
-      "projectName": "ViewModels",
-      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\ViewModels\\ViewModels.csproj",
+      "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\ViewModels\\ViewModels.Impl.csproj",
+      "projectName": "ViewModels.Impl",
+      "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\ViewModels\\ViewModels.Impl.csproj",
       "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
       "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\ViewModels\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "FuqPLQdTi7iAhWBHdSPJUWozRkdVHC713ye6eFDGi3R+dDofoEwrb/fgFdc1tl1iUI8T3lEKZYjFM59F0tPqlA==",
+  "success": true,
+  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\ViewModels.Abstract\\ViewModels.Abstract.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Макс\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
