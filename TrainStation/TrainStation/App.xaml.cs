@@ -1,5 +1,7 @@
 ﻿
 using DAl.Impl.EFCore;
+using DAl.Impl.UnitOfWork;
+using DAL.Abstract;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -51,6 +53,9 @@ namespace TrainStation
             services.AddScoped<TicketRepository>();
             services.AddScoped<TrainRepository>();
             services.AddScoped<VanRepository>();
+
+            services.AddScoped<UnitOfWork>();
+
         }
 
         protected override void OnStartup(StartupEventArgs e)
@@ -78,6 +83,8 @@ namespace TrainStation
             var RoutesRepo = ServiceProvider.GetRequiredService<RouteProperetiesRepository>();
             var routeWhatNeded = RoutesRepo.GetAll();
 
+            var UoW = ServiceProvider.GetRequiredService<UnitOfWork>();
+            var aaa = UoW.SeatRepository.Get().ToList();
 
         }
 
