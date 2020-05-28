@@ -191,6 +191,8 @@ namespace ViewModels.Impl
 
             passangerService.Add(passanger);
 
+            passangerService.Save();    
+
             Passanger = passanger;
             OnPropertyChanged(nameof(Passanger));
         }

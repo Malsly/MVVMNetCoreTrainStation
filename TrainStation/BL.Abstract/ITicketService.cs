@@ -13,5 +13,6 @@ namespace BL.Abstract
         IResult Add(TicketDTO dto);
         IResult Update(TicketDTO dto);
         IResult Delete(int id);
+        void Save();
     }
 }

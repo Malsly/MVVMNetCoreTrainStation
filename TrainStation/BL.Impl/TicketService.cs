@@ -19,10 +19,12 @@ namespace BL.Impl
 
         readonly TicketMapper Mapper;
         readonly GenericRepository<Ticket> Repo;
+        readonly UnitOfWork UoW;
 
         public TicketService()
         {
-            Repo = new UnitOfWork().Tickets;
+            UoW = new UnitOfWork();
+            Repo = UoW.Tickets;
             Mapper = new TicketMapper(Repo);
         }
 
@@ -74,6 +76,11 @@ namespace BL.Impl
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
+        }
+
+        public void Save()
+        {
+            UoW.Save();
         }
     }
 }

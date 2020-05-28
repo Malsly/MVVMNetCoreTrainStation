@@ -5,21 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TrainStation.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="274.104" d:DesignWidth="361.726">
     <Grid>
 
-        <Label Content="Station" HorizontalAlignment="Left" Margin="487,104,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,104,0,0" Text="{Binding Path=SelectedStation.Name}" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" IsEnabled="False"/>
-        <Label Content="Train" HorizontalAlignment="Left" Margin="487,130,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,135,0,0" Text="{Binding Path=SelectedTrain.Name}" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" IsEnabled="False"/>
-        <Label Content="Van" HorizontalAlignment="Left" Margin="487,161,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,166,0,0" Text="{Binding Path=SelectedVan.Number}" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" IsEnabled="False"/>
-        <Label Content="Seat" HorizontalAlignment="Left" Margin="487,192,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,197,0,0" Text="{Binding Path=SelectedSeat.Number}" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" IsEnabled="False"/>
-        <Label Content="Price" HorizontalAlignment="Left" Margin="487,223,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="530,228,0,0" Text="{Binding Path=Ticket.Price}" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" IsEnabled="False"/>
+        <Label Content="Station" HorizontalAlignment="Left" Margin="24,31,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="67,31,0,0" Text="{Binding Path=SelectedStation.Name}" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" IsEnabled="False"/>
+        <Label Content="Train" HorizontalAlignment="Left" Margin="24,57,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="67,62,0,0" Text="{Binding Path=SelectedTrain.Name}" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+        <Label Content="Van" HorizontalAlignment="Left" Margin="24,88,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="67,93,0,0" Text="{Binding Path=SelectedVan.Number}" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
+        <Label Content="Seat" HorizontalAlignment="Left" Margin="24,119,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="67,0,0,0" Text="{Binding Path=SelectedSeat.Number}" TextWrapping="Wrap" VerticalAlignment="Center" Width="150" IsEnabled="False"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="24,150,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="67,155,0,0" Text="{Binding Path=Ticket.Price}" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" IsEnabled="False"/>
 
-        <Button Content="Get Ticket" HorizontalAlignment="Left" Height="26" Margin="667,104,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click"/>
+        <Button Content="Get Ticket" HorizontalAlignment="Left" Height="26" Margin="204,31,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click"/>
 
     </Grid>
 </UserControl>

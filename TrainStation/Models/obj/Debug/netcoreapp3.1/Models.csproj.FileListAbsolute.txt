@@ -24,3 +24,4 @@ D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcore
 D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
 D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.dll
 D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.pdb
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache

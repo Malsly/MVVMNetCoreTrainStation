@@ -19,10 +19,11 @@ namespace BL.Impl
 
         readonly PassangerMapper Mapper;
         readonly GenericRepository<Passanger> Repo;
-
+        readonly UnitOfWork UoW;
         public PassangerService()
         {
-            Repo = new UnitOfWork().Passangers;
+            UoW = new UnitOfWork();
+            Repo = UoW.Passangers;
             Mapper = new PassangerMapper(Repo);
         }
 
@@ -74,6 +75,10 @@ namespace BL.Impl
                 Message = ResponseMessageType.None,
                 ResponseStatusType = ResponseStatusType.Successed
             };
+        }
+        public void Save()
+        {
+            UoW.Save();
         }
     }
 }

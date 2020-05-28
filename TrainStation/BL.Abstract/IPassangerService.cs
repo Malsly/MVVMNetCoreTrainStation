@@ -13,5 +13,6 @@ namespace BL.Abstract
         IResult Add(PassangerDTO dto);
         IResult Update(PassangerDTO dto);
         IResult Delete(int id);
+        void Save();
     }
 }

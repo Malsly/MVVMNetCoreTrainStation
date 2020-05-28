@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TrainStation.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="89.529" d:DesignWidth="206.95">
+             d:DesignHeight="71.137" d:DesignWidth="180.237">
     <Grid Margin="0,0,15,14" Width="145" Height="35">
         <ComboBox 
         x:Name="selectStation" 
