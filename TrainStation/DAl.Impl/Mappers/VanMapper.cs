@@ -29,11 +29,13 @@ namespace DAl.Impl.Mappers
             if (entity == null)
                 return new Van()
                 {
+                    TrainId = dto.TrainId,
                     Number = dto.Number,
                     ClassPropereties = UoW.ClassPropereties.GetByID(dto.ClassProperetiesId),
                     ClassProperetiesId = dto.ClassProperetiesId,
                     Id = dto.Id,
                 };
+            entity.TrainId = dto.TrainId;
             entity.Number = dto.Number;
             entity.ClassPropereties = UoW.ClassPropereties.GetByID(dto.ClassProperetiesId);
             entity.ClassProperetiesId = dto.ClassProperetiesId;
@@ -45,6 +47,7 @@ namespace DAl.Impl.Mappers
         {
             return new VanDTO()
             {
+                TrainId = entity.TrainId,
                 Number = entity.Number,
                 ClassProperetiesId = entity.ClassProperetiesId,
                 Id = entity.Id

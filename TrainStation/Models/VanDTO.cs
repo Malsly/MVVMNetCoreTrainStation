@@ -10,5 +10,6 @@ namespace Entities
         public int Id { get; set; }
         public int ClassProperetiesId { get; set; }
         public int Number { get; set; }
+        public int TrainId { get; set; }
     }
 }

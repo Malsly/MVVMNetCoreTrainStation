@@ -1,0 +1,9 @@
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\bin\Debug\netcoreapp3.1\ViewModels.Abstract.deps.json
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\bin\Debug\netcoreapp3.1\ViewModels.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\bin\Debug\netcoreapp3.1\ViewModels.Abstract.pdb
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\obj\Debug\netcoreapp3.1\ViewModels.Abstract.csprojAssemblyReference.cache
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\obj\Debug\netcoreapp3.1\ViewModels.Abstract.csproj.CoreCompileInputs.cache
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\obj\Debug\netcoreapp3.1\ViewModels.Abstract.AssemblyInfoInputs.cache
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\obj\Debug\netcoreapp3.1\ViewModels.Abstract.AssemblyInfo.cs
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\obj\Debug\netcoreapp3.1\ViewModels.Abstract.dll
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\ViewModels.Abstract\obj\Debug\netcoreapp3.1\ViewModels.Abstract.pdb

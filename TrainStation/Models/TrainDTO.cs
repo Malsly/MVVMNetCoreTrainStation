@@ -12,5 +12,6 @@ namespace Entities
         public string PlaceDeparture { get; set; }
         public string PlaceArrival { get; set; }
         public List<RouteProperetiesDTO> RoutePropereties { get; set; }
+        public int StationId { get; set; }
     }
 }

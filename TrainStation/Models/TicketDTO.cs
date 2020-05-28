@@ -13,6 +13,7 @@ namespace Entities
         public int VanId { get; set; }
         public int TrainId { get; set; }
         public int SeatId { get; set; }
-        public int RouteProperetiesId { get; set; }
+        public int StationId { get; set; }
+
     }
 }

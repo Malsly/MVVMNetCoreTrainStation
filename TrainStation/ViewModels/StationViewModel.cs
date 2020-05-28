@@ -3,12 +3,16 @@ using BL.Impl;
 using Entities;
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace ViewModels.Impl
 {
-    public class StationViewModel
+    public class StationViewModel : INotifyPropertyChanged
     {
+        public string TestForBind { get; set; }
+
         IStationService stationService;
         ITrainService trainService;
         IVanService vanService;
@@ -17,6 +21,13 @@ namespace ViewModels.Impl
         IPassangerService passangerService;
         IRouteProperetiesService routeProperetiesService;
         IClassProperetiesService classProperetiesService;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+        }
+
         public ObservableCollection<StationDTO> Stations
         {
             get;
@@ -47,22 +58,22 @@ namespace ViewModels.Impl
             get;
             set;
         }
-        public StationDTO SelectedStation
+        public int SelectedStationId
         {
             get;
             set;
         }
-        public TrainDTO SelectedTrain
+        public int SelectedTrainId
         {
             get;
             set;
         }
-        public VanDTO SelectedVan
+        public int SelectedVanId
         {
             get;
             set;
         }
-        public SeatDTO SelectedSeat
+        public int SelectedSeatId
         {
             get;
             set;
@@ -85,32 +96,82 @@ namespace ViewModels.Impl
 
         public void LoadStations()
         {
-            seatService = new SeatService();
-            vanService = new VanService();
-            trainService = new TrainService();            
-            stationService = new StationService();
-            trainService = new TrainService();
             
+            stationService = new StationService();
             ObservableCollection<StationDTO> stations = new ObservableCollection<StationDTO>();
-            ObservableCollection<TrainDTO> trains = new ObservableCollection<TrainDTO>();
-            ObservableCollection<VanDTO> vans = new ObservableCollection<VanDTO>();
-            ObservableCollection<SeatDTO> seats = new ObservableCollection<SeatDTO>();
-
-            foreach (SeatDTO seat in seatService.GetAll().Data.ToList<SeatDTO>()) seats.Add(seat);
-
-            foreach (VanDTO van in vanService.GetAll().Data.ToList<VanDTO>()) vans.Add(van);
-
-            foreach (TrainDTO train in trainService.GetAll().Data.ToList<TrainDTO>()) trains.Add(train);
-
             foreach (StationDTO station in stationService.GetAll().Data.ToList<StationDTO>()) stations.Add(station);
 
-            
-
-
             Stations = stations;
+            //OnPropertyChanged(nameof(Stations));
+        }
+        public void RefreshTrains()
+        {
+            
+            trainService = new TrainService();
+            ObservableCollection<TrainDTO> trains = new ObservableCollection<TrainDTO>();
+            foreach(TrainDTO train in trainService.GetAll().Data.ToList<TrainDTO>()) {
+                if (train.StationId == SelectedStationId) 
+                {
+                    trains.Add(train);
+                }
+            }
+
             Trains = trains;
+            OnPropertyChanged(nameof(Trains));
+        }
+        public void RefreshVans()
+        {
+
+            vanService = new VanService();
+            ObservableCollection<VanDTO> vans = new ObservableCollection<VanDTO>();
+            foreach (VanDTO van in vanService.GetAll().Data.ToList<VanDTO>())
+            {
+                if (van.TrainId == SelectedTrainId)
+                {
+                    vans.Add(van);
+                }
+            }
+
             Vans = vans;
+            OnPropertyChanged(nameof(Vans));
+        }
+        public void RefreshSeats()
+        {
+
+            seatService = new SeatService();
+            ObservableCollection<SeatDTO> seats = new ObservableCollection<SeatDTO>();
+            foreach (SeatDTO seat in seatService.GetAll().Data.ToList<SeatDTO>())
+            {
+                if (seat.VanId == SelectedVanId)
+                {
+                    seats.Add(seat);
+                }
+            }
+
             Seats = seats;
+            OnPropertyChanged(nameof(Seats));
+        }
+
+        public void RefreshTickets()
+        {
+
+            ticketService = new TicketService();
+            int price = trainService.Get(SelectedTrainId).Data.RoutePropereties.Last().Price;
+            price += classProperetiesService.Get(vanService.Get(SelectedVanId).Data.ClassProperetiesId).Data.Price;
+            TicketDTO ticket = new TicketDTO()
+            {
+                VanId = SelectedVanId,
+                SeatId = SelectedSeatId,
+                TrainId = SelectedTrainId,
+                StationId = SelectedStationId,
+                Price = price
+            };
+
+
+            ticketService.Add(ticket);
+
+            Ticket = ticket;
+            OnPropertyChanged(nameof(Ticket));
         }
     }
 }

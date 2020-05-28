@@ -23,11 +23,13 @@ namespace DAl.Impl.Mappers
             if (entity == null)
                 return new Seat()
                 {
+                    VanId = dto.VanId,
                     Number = dto.Number,
                     Type = dto.Type,
                     IsOccupied = dto.IsOccupied,
                     Id = dto.Id
                 };
+            entity.VanId = dto.VanId;
             entity.Number = dto.Number;
             entity.Type = dto.Type;
             entity.IsOccupied = dto.IsOccupied;
@@ -39,6 +41,7 @@ namespace DAl.Impl.Mappers
         {
             return new SeatDTO()
             {
+                VanId = entity.VanId,
                 Number = entity.Number,
                 Type = entity.Type,
                 IsOccupied = entity.IsOccupied,

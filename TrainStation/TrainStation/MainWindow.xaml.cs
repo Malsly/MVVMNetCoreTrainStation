@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 using ViewModels.Impl;
 
 namespace TrainStation
@@ -22,12 +21,31 @@ namespace TrainStation
     /// </summary>
     public partial class MainWindow : Window
     {
-        private StationViewModel stationViewModel;
+        StationViewModel stationViewModelObject;
         public MainWindow()
         {
             InitializeComponent();
-            stationViewModel = new StationViewModel();
-            this.DataContext = stationViewModel;
+            stationViewModelObject = new StationViewModel();
         }
+
+        private void StationViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            stationViewModelObject.LoadStations();
+
+            StationViewControl.DataContext = stationViewModelObject;
+        }
+        private void TrainViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            TrainViewControl.DataContext = stationViewModelObject;
+        }
+        private void VanViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            VanViewControl.DataContext = stationViewModelObject;
+        }
+        private void SeatViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            SeatViewControl.DataContext = stationViewModelObject;
+        }
+
     }
 }

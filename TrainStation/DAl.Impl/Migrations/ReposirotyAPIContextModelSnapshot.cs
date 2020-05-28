@@ -100,7 +100,7 @@ namespace DAl.Impl.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("VanId")
+                    b.Property<int>("VanId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -138,10 +138,10 @@ namespace DAl.Impl.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("RouteProperetiesId")
+                    b.Property<int>("SeatId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SeatId")
+                    b.Property<int>("StationId")
                         .HasColumnType("int");
 
                     b.Property<int>("TrainId")
@@ -154,9 +154,9 @@ namespace DAl.Impl.Migrations
 
                     b.HasIndex("PassangerId");
 
-                    b.HasIndex("RouteProperetiesId");
-
                     b.HasIndex("SeatId");
+
+                    b.HasIndex("StationId");
 
                     b.HasIndex("TrainId");
 
@@ -204,7 +204,7 @@ namespace DAl.Impl.Migrations
                     b.Property<int>("Number")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TrainId")
+                    b.Property<int>("TrainId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -227,9 +227,11 @@ namespace DAl.Impl.Migrations
 
             modelBuilder.Entity("Entities.Seat", b =>
                 {
-                    b.HasOne("Entities.Van", null)
+                    b.HasOne("Entities.Van", "Van")
                         .WithMany("Seats")
-                        .HasForeignKey("VanId");
+                        .HasForeignKey("VanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Entities.Ticket", b =>
@@ -240,15 +242,15 @@ namespace DAl.Impl.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entities.RoutePropereties", "RoutePropereties")
-                        .WithMany()
-                        .HasForeignKey("RouteProperetiesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Entities.Seat", "Seat")
                         .WithMany()
                         .HasForeignKey("SeatId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entities.Station", "Station")
+                        .WithMany()
+                        .HasForeignKey("StationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -282,9 +284,11 @@ namespace DAl.Impl.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Entities.Train", null)
+                    b.HasOne("Entities.Train", "Train")
                         .WithMany("Vans")
-                        .HasForeignKey("TrainId");
+                        .HasForeignKey("TrainId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

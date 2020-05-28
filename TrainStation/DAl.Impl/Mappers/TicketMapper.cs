@@ -30,7 +30,7 @@ namespace DAl.Impl.Mappers
                     Van = UoW.Vans.GetByID(dto.VanId),
                     Train = UoW.Trains.GetByID(dto.TrainId),
                     Seat = UoW.Seats.GetByID(dto.SeatId),
-                    RoutePropereties = UoW.RoutePropereties.GetByID(dto.RouteProperetiesId)
+                    Station = UoW.Stations.GetByID(dto.StationId)
                 };
             entity.Id = dto.Id;
             entity.Price = dto.Price;
@@ -38,7 +38,7 @@ namespace DAl.Impl.Mappers
             entity.Van = UoW.Vans.GetByID(dto.VanId);
             entity.Train = UoW.Trains.GetByID(dto.TrainId);
             entity.Seat = UoW.Seats.GetByID(dto.SeatId);
-            entity.RoutePropereties = UoW.RoutePropereties.GetByID(dto.RouteProperetiesId);
+            entity.Station = UoW.Stations.GetByID(dto.StationId);
             return entity;
         }   
 
@@ -52,7 +52,7 @@ namespace DAl.Impl.Mappers
                 VanId = entity.VanId,
                 TrainId = entity.TrainId,
                 SeatId = entity.SeatId,
-                RouteProperetiesId = entity.RouteProperetiesId
+                StationId = entity.StationId
             };
         }
     }

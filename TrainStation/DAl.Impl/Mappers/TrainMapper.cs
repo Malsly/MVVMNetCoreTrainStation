@@ -28,6 +28,7 @@ namespace DAl.Impl.Mappers
                 foreach (RouteProperetiesDTO rpd in dto.RoutePropereties) routePropListEntity.Add(new RoutePropereties() { Id = rpd.Id, Price = rpd.Price, Place = rpd.Place, Date = rpd.Date });
                 return new Train()
                 {
+                    StationId = dto.StationId,
                     PlaceDeparture = dto.PlaceDeparture,
                     PlaceArrival = dto.PlaceArrival,
                     Name = dto.Name,
@@ -38,6 +39,7 @@ namespace DAl.Impl.Mappers
             entity.PlaceDeparture = dto.PlaceDeparture;
             entity.PlaceArrival = dto.PlaceArrival;
             entity.Name = dto.Name;
+            entity.StationId = dto.StationId;
             foreach (RouteProperetiesDTO rpd in dto.RoutePropereties) entity.RoutePropereties.Add(new RoutePropereties() { Id = rpd.Id, Price = rpd.Price, Place = rpd.Place, Date = rpd.Date });
             entity.Id = dto.Id;
             return entity;
@@ -55,6 +57,7 @@ namespace DAl.Impl.Mappers
             }
             return new TrainDTO()
             {
+                StationId = entity.StationId,
                 PlaceDeparture = entity.PlaceDeparture,
                 PlaceArrival = entity.PlaceArrival,
                 RoutePropereties = routePropListDTO,

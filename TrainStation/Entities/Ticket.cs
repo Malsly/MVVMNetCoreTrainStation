@@ -20,7 +20,7 @@ namespace Entities
         [Required]
         public int SeatId { get; set; }
         [Required]
-        public int RouteProperetiesId { get; set; }
+        public int StationId { get; set; }
         [ForeignKey(nameof(PassangerId))]
         public Passanger Passanger { get; set; }
         [ForeignKey(nameof(VanId))]
@@ -29,7 +29,7 @@ namespace Entities
         public Train Train { get; set; }
         [ForeignKey(nameof(SeatId))]
         public Seat Seat { get; set; }
-        [ForeignKey(nameof(RouteProperetiesId))]
-        public RoutePropereties RoutePropereties { get; set; }
+        [ForeignKey(nameof(StationId))]
+        public Station Station { get; set; }
     }
 }

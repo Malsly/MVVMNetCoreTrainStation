@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TrainStation"
+        xmlns:views = "clr-namespace:TrainStation.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <views:StationView x:Name = "StationViewControl" Loaded = "StationViewControl_Loaded" Margin="10,28,-10,-28"/>
+        <views:TrainView x:Name = "TrainViewControl" Loaded = "TrainViewControl_Loaded" Margin="58,28,-58,-28"/>
+        <views:VanView x:Name = "VanViewControl" Loaded = "VanViewControl_Loaded" Margin="-35,28,35,-28"/>
+        <views:SeatView x:Name = "SeatViewControl" Loaded = "SeatViewControl_Loaded" Margin="58,219,-58,-219"/>
     </Grid>
 </Window>

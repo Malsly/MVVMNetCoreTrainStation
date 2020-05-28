@@ -17,5 +17,9 @@ namespace Entities
         [ForeignKey(nameof(ClassProperetiesId))]
         public ClassPropereties ClassPropereties { get; set; }
         public int Number { get; set; }
+        [Required]
+        public int TrainId { get; set; }
+        [ForeignKey(nameof(TrainId))]
+        public Train Train { get; set; }
     }
 }

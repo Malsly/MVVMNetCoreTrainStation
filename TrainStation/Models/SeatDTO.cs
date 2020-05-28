@@ -11,5 +11,6 @@ namespace Entities
         public int Number { get; set; }
         public string Type { get; set; }
         public Boolean IsOccupied { get; set; }
+        public int VanId { get; set; }
     }
 }
