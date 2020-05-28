@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:TrainStation"
         xmlns:views = "clr-namespace:TrainStation.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="452" Width="915">
     <Grid>
-        <views:StationView x:Name = "StationViewControl" Loaded = "StationViewControl_Loaded" Margin="0,10,649,390" Width="145" Height="35"/>
-        <views:TrainView x:Name = "TrainViewControl" Loaded = "TrainViewControl_Loaded" Margin="-10,10,10,-10"/>
-        <views:VanView x:Name = "VanViewControl" Loaded = "VanViewControl_Loaded" Margin="293,10,140,356"/>
-        <views:SeatView x:Name = "SeatViewControl" Loaded = "SeatViewControl_Loaded" Margin="546,5,83,361"/>
-        <views:TicketView x:Name = "TicketViewControl" Loaded = "TicketViewControl_Loaded" Margin="-45,119,45,-119"/>
-        <views:PassangerView x:Name = "PassangerViewControl" Loaded = "PassangerViewControl_Loaded" Margin="26,-84,-26,84"/>
+        <views:StationView x:Name = "StationViewControl" Loaded = "StationViewControl_Loaded" Margin="-15,61,570,242"/>
+        <views:TrainView x:Name = "TrainViewControl" Loaded = "TrainViewControl_Loaded" Margin="-116,-119,105,79"/>
+        <views:VanView x:Name = "VanViewControl" Loaded = "VanViewControl_Loaded" Margin="441,80,302,270"/>
+        <views:SeatView x:Name = "SeatViewControl" Loaded = "SeatViewControl_Loaded" Margin="541,56,49,250"/>
+        <views:TicketView x:Name = "TicketViewControl" Loaded = "TicketViewControl_Loaded" Margin="41,143,-41,-143"/>
+        <views:PassangerView x:Name = "PassangerViewControl" Loaded = "PassangerViewControl_Loaded" Margin="70,-63,-70,63"/>
     </Grid>
 </Window>

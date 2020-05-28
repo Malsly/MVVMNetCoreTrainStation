@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj": {}
+    "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj": {}
   },
   "projects": {
-    "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj": {
+    "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
+        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
         "projectName": "DAL.Abstract",
-        "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
+        "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj",
         "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-        "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\obj\\",
+        "outputPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj"
+              "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj": {
+    "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
+        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
         "projectName": "DAl.Impl",
-        "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
+        "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAl.Impl\\DAl.Impl.csproj",
         "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-        "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAl.Impl\\obj\\",
+        "outputPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAl.Impl\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,14 +103,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj": {
-                "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj"
+              "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj": {
+                "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\DAL.Abstract\\DAL.Abstract.csproj"
               },
-              "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
-                "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj"
+              "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
+                "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj"
               },
-              "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {
-                "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj"
+              "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {
+                "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj"
               }
             }
           }
@@ -174,14 +174,14 @@
         }
       }
     },
-    "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
+    "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj",
+        "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-        "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Entities\\obj\\",
+        "outputPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -236,14 +236,14 @@
         }
       }
     },
-    "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {
+    "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj",
+        "projectUniqueName": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj",
+        "projectPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Макс\\.nuget\\packages\\",
-        "outputPath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\Models\\obj\\",
+        "outputPath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Макс\\AppData\\Roaming\\NuGet\\NuGet.Config",

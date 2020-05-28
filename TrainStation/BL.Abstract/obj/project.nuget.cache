@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "saulV1sHtEYQN6OHJGJQ16Rb6Fqn619NsUbRSO0Gz6H0bs8ckG3DtxgkXsAM3uWEHGKKiwyAgmeB1IEsuH7+1w==",
+  "dgSpecHash": "OKNQRkGbtjofKQor7e4gS453kBariF1syMGLx1NmR23IHI/6jB1qJgLUSPB8CtbYWk8iwS/Qk0w91ExVOvSUIA==",
   "success": true,
-  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj",
+  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\BL.Abstract\\BL.Abstract.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Макс\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\Макс\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"

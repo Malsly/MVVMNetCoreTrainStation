@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\
 TrainStation
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
-D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\App.xaml
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\TrainStation\App.xaml
 7136076047
 
 101142551464
-220314801084
+220-1633265963
 MainWindow.xaml;Views\PassangerView.xaml;Views\SeatView.xaml;Views\StationView.xaml;Views\TicketView.xaml;Views\TrainView.xaml;Views\VanView.xaml;
 
 False

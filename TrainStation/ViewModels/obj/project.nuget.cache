@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x8LhLSmld2V5mKIwl/ZsVtS/TzWSk4iT7OHk+vEUFL0vnVoxDAIl0Xa0x+RpEZuYlzqqupH3NvEMct5/+1tz7A==",
+  "dgSpecHash": "g7KGlRzq86EnJsPVdyw48vKduYMWLK3r4y8YCX/uVWmv7UWhJIPaV2L6B4s/wcNTC+FjbuT0DutyqvE64VP9HA==",
   "success": true,
-  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\KekWait\\NewStartPRKZ\\TrainStation\\ViewModels\\ViewModels.Impl.csproj",
+  "projectFilePath": "D:\\univer\\AAA\\PRKZ\\PRKZFOLDER\\NewStartPRKZ\\TrainStation\\ViewModels\\ViewModels.Impl.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Макс\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Макс\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

@@ -19,7 +19,6 @@ namespace ViewModels.Impl
         ISeatService seatService;
         ITicketService ticketService;
         IPassangerService passangerService;
-        IRouteProperetiesService routeProperetiesService;
         IClassProperetiesService classProperetiesService;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -63,7 +62,17 @@ namespace ViewModels.Impl
             get;
             set;
         }
+        public StationDTO SelectedStation
+        {
+            get;
+            set;
+        }
         public int SelectedTrainId
+        {
+            get;
+            set;
+        }
+        public TrainDTO SelectedTrain
         {
             get;
             set;
@@ -73,7 +82,17 @@ namespace ViewModels.Impl
             get;
             set;
         }
+        public VanDTO SelectedVan
+        {
+            get;
+            set;
+        }
         public int SelectedSeatId
+        {
+            get;
+            set;
+        }
+        public SeatDTO SelectedSeat
         {
             get;
             set;
@@ -98,16 +117,11 @@ namespace ViewModels.Impl
             get;
             set;
         }
-        public RouteProperetiesDTO SelectedRoute
-        {
-            get;
-            set;
-        }
         public PassangerDTO Passanger { get; set; }
 
         public void LoadStations()
         {
-            
+
             stationService = new StationService();
             ObservableCollection<StationDTO> stations = new ObservableCollection<StationDTO>();
             foreach (StationDTO station in stationService.GetAll().Data.ToList<StationDTO>()) stations.Add(station);
@@ -116,11 +130,12 @@ namespace ViewModels.Impl
         }
         public void RefreshTrains()
         {
-            
+
             trainService = new TrainService();
             ObservableCollection<TrainDTO> trains = new ObservableCollection<TrainDTO>();
-            foreach(TrainDTO train in trainService.GetAll().Data.ToList<TrainDTO>()) {
-                if (train.StationId == SelectedStationId) 
+            foreach (TrainDTO train in trainService.GetAll().Data.ToList<TrainDTO>())
+            {
+                if (train.StationId == SelectedStationId)
                 {
                     trains.Add(train);
                 }
@@ -182,8 +197,14 @@ namespace ViewModels.Impl
 
         public void RefreshTickets()
         {
+            stationService = new StationService();
+            trainService = new TrainService();
+            vanService = new VanService();
+            seatService = new SeatService();
+
             classProperetiesService = new ClassProperetiesService();
             ticketService = new TicketService();
+
             int price = trainService.Get(SelectedTrainId).Data.RoutePropereties.Last().Price;
             VanDTO neededVan = vanService.Get(SelectedVanId).Data;
 
@@ -199,10 +220,18 @@ namespace ViewModels.Impl
                 PassangerId = Passanger.Id
             };
 
+            SelectedStation = stationService.Get(SelectedStationId).Data;
+            SelectedTrain = trainService.Get(SelectedTrainId).Data;
+            SelectedVan = vanService.Get(SelectedVanId).Data;
+            SelectedSeat = seatService.Get(SelectedSeatId).Data;
 
             ticketService.Add(ticket);
 
             Ticket = ticket;
+            OnPropertyChanged(nameof(SelectedStation));
+            OnPropertyChanged(nameof(SelectedTrain));
+            OnPropertyChanged(nameof(SelectedVan));
+            OnPropertyChanged(nameof(SelectedSeat));
             OnPropertyChanged(nameof(Ticket));
             OnPropertyChanged(nameof(Stations));
         }

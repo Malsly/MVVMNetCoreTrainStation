@@ -16,3 +16,11 @@ D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.dll
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.pdb
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\bin\Debug\netcoreapp3.1\Models.deps.json
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\bin\Debug\netcoreapp3.1\Models.dll
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\bin\Debug\netcoreapp3.1\Models.pdb
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.cache
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.dll
+D:\univer\AAA\PRKZ\PRKZFOLDER\NewStartPRKZ\TrainStation\Models\obj\Debug\netcoreapp3.1\Models.pdb

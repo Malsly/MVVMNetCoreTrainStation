@@ -5,14 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TrainStation.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="67.655" d:DesignWidth="170.724">
-    <Grid>
+             d:DesignHeight="75.658" d:DesignWidth="166.023">
+    <Grid Margin="0,0,0,-10">
         <ComboBox 
         x:Name="selectSeat" 
         Text="Select Seat"
         ItemsSource="{Binding Path=Seats}"
         DisplayMemberPath="Number"
         SelectedValuePath="Id"
-        SelectedValue="{Binding Path=SelectedSeatId}" Margin="10,10,0,10" SelectionChanged="selectSeat_SelectionChanged" DropDownOpened="selectSeat_DropDownOpened" Width="145" Height="35" />
+        SelectedValue="{Binding Path=SelectedSeatId}" Margin="10,20,11,31" SelectionChanged="selectSeat_SelectionChanged" DropDownOpened="selectSeat_DropDownOpened" Width="145" Height="35" />
     </Grid>
 </UserControl>
