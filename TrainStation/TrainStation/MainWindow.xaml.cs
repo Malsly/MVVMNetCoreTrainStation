@@ -47,5 +47,13 @@ namespace TrainStation
             SeatViewControl.DataContext = stationViewModelObject;
         }
 
+        private void TicketViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            TicketViewControl.DataContext = stationViewModelObject;
+        }
+        private void PassangerViewControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            PassangerViewControl.DataContext = stationViewModelObject;
+        }
     }
 }

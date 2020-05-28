@@ -76,3 +76,7 @@ D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\bin\Debug\netc
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\TrainStation.csproj.CoreCompileInputs.cache
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\Views\SeatView.g.cs
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\Views\SeatView.baml
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\Views\TicketView.g.cs
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\Views\TicketView.baml
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\Views\PassangerView.g.cs
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\obj\Debug\netcoreapp3.1\Views\PassangerView.baml

@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="TrainStation.Views.PassangerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TrainStation.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Height="26" Margin="53,328,0,0" VerticalAlignment="Top" Width="88" IsEnabled="False"/>
+        <Label Content="Telephone" HorizontalAlignment="Left" Height="26" Margin="53,359,0,0" VerticalAlignment="Top" Width="88" IsEnabled="False"/>
+        <Label Content="Email" HorizontalAlignment="Left" Height="26" Margin="53,385,0,0" VerticalAlignment="Top" Width="88" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="163,328,0,0"  Text="{Binding Path=Passanger.Name}" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="163,385,0,0" Text="{Binding Path=Passanger.Email}" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="White"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="163,360,0,0" Text="{Binding Path=Passanger.Telephone}" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="White"/>
+        <Button Content="Register Passanger" HorizontalAlignment="Left" Height="24" Margin="97,416,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click"/>
+
+    </Grid>
+</UserControl>

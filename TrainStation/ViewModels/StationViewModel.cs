@@ -78,7 +78,17 @@ namespace ViewModels.Impl
             get;
             set;
         }
-        public PassangerDTO Passanger
+        public string PassangerName
+        {
+            get;
+            set;
+        }
+        public string PassangerEmail
+        {
+            get;
+            set;
+        }
+        public string PassangerTelephone
         {
             get;
             set;
@@ -93,6 +103,7 @@ namespace ViewModels.Impl
             get;
             set;
         }
+        public PassangerDTO Passanger { get; set; }
 
         public void LoadStations()
         {
@@ -152,19 +163,46 @@ namespace ViewModels.Impl
             OnPropertyChanged(nameof(Seats));
         }
 
-        public void RefreshTickets()
+        public void RefreshPassangers()
         {
 
+            passangerService = new PassangerService();
+
+            PassangerDTO passanger = new PassangerDTO()
+            {
+                Name = PassangerName,
+                Email = PassangerEmail,
+                Telephone = PassangerTelephone
+            };
+
+            passangerService.Add(passanger);
+
+            Passanger = passanger;
+            OnPropertyChanged(nameof(Passanger));
+        }
+
+        public void RefreshTickets()
+        {
+            classProperetiesService = new ClassProperetiesService();
             ticketService = new TicketService();
             int price = trainService.Get(SelectedTrainId).Data.RoutePropereties.Last().Price;
-            price += classProperetiesService.Get(vanService.Get(SelectedVanId).Data.ClassProperetiesId).Data.Price;
+            VanDTO neededVan = vanService.Get(SelectedVanId).Data;
+
+            int idClass = neededVan.ClassProperetiesId;
+            price += classProperetiesService.Get(idClass).Data.Price;
+
+            
+
+
+            
             TicketDTO ticket = new TicketDTO()
             {
                 VanId = SelectedVanId,
                 SeatId = SelectedSeatId,
                 TrainId = SelectedTrainId,
                 StationId = SelectedStationId,
-                Price = price
+                Price = price,
+                PassangerId = Passanger.Id
             };
 
 

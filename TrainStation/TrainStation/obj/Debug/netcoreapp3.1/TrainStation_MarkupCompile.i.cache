@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\TrainStation\App.xaml
-5-1056930379
+7136076047
 
-852494390
+101142551464
 220314801084
-MainWindow.xaml;Views\SeatView.xaml;Views\StationView.xaml;Views\TrainView.xaml;Views\VanView.xaml;
+MainWindow.xaml;Views\PassangerView.xaml;Views\SeatView.xaml;Views\StationView.xaml;Views\TicketView.xaml;Views\TrainView.xaml;Views\VanView.xaml;
 
 False
 

@@ -15,24 +15,19 @@ using ViewModels.Impl;
 namespace TrainStation.Views
 {
     /// <summary>
-    /// Interaction logic for SeatView.xaml
+    /// Interaction logic for PassangerView.xaml
     /// </summary>
-    public partial class SeatView : UserControl
+    public partial class PassangerView : UserControl
     {
-        public SeatView()
+        public PassangerView()
         {
             InitializeComponent();
         }
 
-        private void selectSeat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             var t = (StationViewModel)DataContext;
-        }
-
-        private void selectSeat_DropDownOpened(object sender, EventArgs e)
-        {
-            var t = (StationViewModel)DataContext;
-            //t.RefreshVans();
+            t.RefreshPassangers();
         }
     }
 }

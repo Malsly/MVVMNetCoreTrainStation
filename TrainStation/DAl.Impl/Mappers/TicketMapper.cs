@@ -24,6 +24,7 @@ namespace DAl.Impl.Mappers
             if (entity == null)
                 return new Ticket()
                 {
+                    StationId = dto.StationId,
                     Id = dto.Id,
                     Price = dto.Price,
                     Passanger = UoW.Passangers.GetByID(dto.PassangerId),
@@ -32,6 +33,7 @@ namespace DAl.Impl.Mappers
                     Seat = UoW.Seats.GetByID(dto.SeatId),
                     Station = UoW.Stations.GetByID(dto.StationId)
                 };
+            entity.StationId = dto.StationId;
             entity.Id = dto.Id;
             entity.Price = dto.Price;
             entity.Passanger = UoW.Passangers.GetByID(dto.PassangerId);
