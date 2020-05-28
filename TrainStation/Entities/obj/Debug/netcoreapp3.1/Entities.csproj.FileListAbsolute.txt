@@ -15,3 +15,4 @@ D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Entities\obj\Debug\netcorea
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.AssemblyInfo.cs
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.dll
 D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.pdb
+D:\univer\AAA\PRKZ\KekWait\NewStartPRKZ\TrainStation\Entities\obj\Debug\netcoreapp3.1\Entities.csprojAssemblyReference.cache

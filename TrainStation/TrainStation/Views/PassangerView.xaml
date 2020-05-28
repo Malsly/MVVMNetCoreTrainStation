@@ -13,7 +13,7 @@
         <TextBox HorizontalAlignment="Left" Height="26" Margin="163,328,0,0"  Text="{Binding Path=Passanger.Name}" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="White"/>
         <TextBox HorizontalAlignment="Left" Height="26" Margin="163,385,0,0" Text="{Binding Path=Passanger.Email}" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="White"/>
         <TextBox HorizontalAlignment="Left" Height="26" Margin="163,360,0,0" Text="{Binding Path=Passanger.Telephone}" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" Background="White"/>
-        <Button Content="Register Passanger" HorizontalAlignment="Left" Height="24" Margin="97,416,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click"/>
+        <Button Content="Register Passanger" HorizontalAlignment="Left" Height="24" Margin="217,359,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click"/>
 
     </Grid>
 </UserControl>

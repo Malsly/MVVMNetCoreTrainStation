@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TrainStation.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="67.852" d:DesignWidth="366.519" Width="145" Height="30">
     <Grid>
         <ComboBox 
         x:Name="selectTrain" 
@@ -13,7 +13,7 @@
         ItemsSource="{Binding Path=Vans}"
         DisplayMemberPath="Number"
         SelectedValuePath="Id"
-        SelectedValue="{Binding Path=SelectedVanId}" Margin="506,10,80,394" SelectionChanged="selectVan_SelectionChanged" DropDownOpened="selectVan_DropDownOpened" />
+        SelectedValue="{Binding Path=SelectedVanId}" Margin="0,0,0,10" SelectionChanged="selectVan_SelectionChanged" DropDownOpened="selectVan_DropDownOpened" Width="145" Height="35" />
 
     </Grid>
 </UserControl>

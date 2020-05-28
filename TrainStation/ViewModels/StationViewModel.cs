@@ -113,7 +113,6 @@ namespace ViewModels.Impl
             foreach (StationDTO station in stationService.GetAll().Data.ToList<StationDTO>()) stations.Add(station);
 
             Stations = stations;
-            //OnPropertyChanged(nameof(Stations));
         }
         public void RefreshTrains()
         {
@@ -191,16 +190,11 @@ namespace ViewModels.Impl
             int idClass = neededVan.ClassProperetiesId;
             price += classProperetiesService.Get(idClass).Data.Price;
 
-            
-
-
-            
             TicketDTO ticket = new TicketDTO()
             {
                 VanId = SelectedVanId,
                 SeatId = SelectedSeatId,
                 TrainId = SelectedTrainId,
-                StationId = SelectedStationId,
                 Price = price,
                 PassangerId = Passanger.Id
             };
@@ -210,6 +204,7 @@ namespace ViewModels.Impl
 
             Ticket = ticket;
             OnPropertyChanged(nameof(Ticket));
+            OnPropertyChanged(nameof(Stations));
         }
     }
 }

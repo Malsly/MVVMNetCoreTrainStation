@@ -21,26 +21,23 @@ namespace DAl.Impl.Mappers
         public Ticket DeMap(TicketDTO dto)
         {
             Ticket entity = repo.GetByID(dto.Id);
+            UoW = new UnitOfWork.UnitOfWork();
             if (entity == null)
                 return new Ticket()
                 {
-                    StationId = dto.StationId,
                     Id = dto.Id,
                     Price = dto.Price,
                     Passanger = UoW.Passangers.GetByID(dto.PassangerId),
                     Van = UoW.Vans.GetByID(dto.VanId),
                     Train = UoW.Trains.GetByID(dto.TrainId),
-                    Seat = UoW.Seats.GetByID(dto.SeatId),
-                    Station = UoW.Stations.GetByID(dto.StationId)
-                };
-            entity.StationId = dto.StationId;
+                    Seat = UoW.Seats.GetByID(dto.SeatId)
+        };
             entity.Id = dto.Id;
             entity.Price = dto.Price;
             entity.Passanger = UoW.Passangers.GetByID(dto.PassangerId);
             entity.Van = UoW.Vans.GetByID(dto.VanId);
             entity.Train = UoW.Trains.GetByID(dto.TrainId);
             entity.Seat = UoW.Seats.GetByID(dto.SeatId);
-            entity.Station = UoW.Stations.GetByID(dto.StationId);
             return entity;
         }   
 
@@ -53,8 +50,7 @@ namespace DAl.Impl.Mappers
                 PassangerId = entity.PassangerId,
                 VanId = entity.VanId,
                 TrainId = entity.TrainId,
-                SeatId = entity.SeatId,
-                StationId = entity.StationId
+                SeatId = entity.SeatId
             };
         }
     }

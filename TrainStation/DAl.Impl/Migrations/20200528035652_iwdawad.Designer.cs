@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReposirotyAPI.Data;
 
 namespace DAl.Impl.Migrations
 {
     [DbContext(typeof(ReposirotyAPIContext))]
-    partial class ReposirotyAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20200528035652_iwdawad")]
+    partial class iwdawad
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

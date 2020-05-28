@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ReposirotyAPI.Data;
 
 namespace DAl.Impl.Migrations
 {
     [DbContext(typeof(ReposirotyAPIContext))]
-    partial class ReposirotyAPIContextModelSnapshot : ModelSnapshot
+    [Migration("20200528034905_ini")]
+    partial class ini
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -141,7 +143,7 @@ namespace DAl.Impl.Migrations
                     b.Property<int>("SeatId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("StationId")
+                    b.Property<int>("StationId")
                         .HasColumnType("int");
 
                     b.Property<int>("TrainId")
@@ -250,7 +252,9 @@ namespace DAl.Impl.Migrations
 
                     b.HasOne("Entities.Station", "Station")
                         .WithMany()
-                        .HasForeignKey("StationId");
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Entities.Train", "Train")
                         .WithMany()
