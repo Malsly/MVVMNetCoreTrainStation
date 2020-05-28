@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DAl.Impl.Migrations
 {
-    public partial class init : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,7 +58,7 @@ namespace DAl.Impl.Migrations
                     Name = table.Column<string>(nullable: true),
                     PlaceDeparture = table.Column<string>(nullable: true),
                     PlaceArrival = table.Column<string>(nullable: true),
-                    StationId = table.Column<int>(nullable: true)
+                    StationId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,7 +68,7 @@ namespace DAl.Impl.Migrations
                         column: x => x.StationId,
                         principalTable: "Station",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -80,7 +80,7 @@ namespace DAl.Impl.Migrations
                     Price = table.Column<int>(nullable: false),
                     Place = table.Column<string>(nullable: true),
                     Date = table.Column<DateTime>(nullable: false),
-                    TrainId = table.Column<int>(nullable: true)
+                    TrainId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -90,7 +90,7 @@ namespace DAl.Impl.Migrations
                         column: x => x.TrainId,
                         principalTable: "Train",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -99,9 +99,9 @@ namespace DAl.Impl.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ClassProperetiesId = table.Column<int>(nullable: true),
+                    ClassProperetiesId = table.Column<int>(nullable: false),
                     Number = table.Column<int>(nullable: false),
-                    TrainId = table.Column<int>(nullable: true)
+                    TrainId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -111,13 +111,13 @@ namespace DAl.Impl.Migrations
                         column: x => x.ClassProperetiesId,
                         principalTable: "ClassPropereties",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Van_Train_TrainId",
                         column: x => x.TrainId,
                         principalTable: "Train",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -129,7 +129,7 @@ namespace DAl.Impl.Migrations
                     Number = table.Column<int>(nullable: false),
                     Type = table.Column<string>(nullable: true),
                     IsOccupied = table.Column<bool>(nullable: false),
-                    VanId = table.Column<int>(nullable: true)
+                    VanId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -139,7 +139,7 @@ namespace DAl.Impl.Migrations
                         column: x => x.VanId,
                         principalTable: "Van",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -148,12 +148,11 @@ namespace DAl.Impl.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PassangerId = table.Column<int>(nullable: true),
                     Price = table.Column<int>(nullable: false),
-                    VanId = table.Column<int>(nullable: true),
-                    TrainId = table.Column<int>(nullable: true),
-                    SeatId = table.Column<int>(nullable: true),
-                    RouteProperetiesId = table.Column<int>(nullable: true)
+                    PassangerId = table.Column<int>(nullable: false),
+                    VanId = table.Column<int>(nullable: false),
+                    TrainId = table.Column<int>(nullable: false),
+                    SeatId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -163,31 +162,25 @@ namespace DAl.Impl.Migrations
                         column: x => x.PassangerId,
                         principalTable: "Passanger",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Ticket_RoutePropereties_RouteProperetiesId",
-                        column: x => x.RouteProperetiesId,
-                        principalTable: "RoutePropereties",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ticket_Seat_SeatId",
                         column: x => x.SeatId,
                         principalTable: "Seat",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ticket_Train_TrainId",
                         column: x => x.TrainId,
                         principalTable: "Train",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Ticket_Van_VanId",
                         column: x => x.VanId,
                         principalTable: "Van",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -204,11 +197,6 @@ namespace DAl.Impl.Migrations
                 name: "IX_Ticket_PassangerId",
                 table: "Ticket",
                 column: "PassangerId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Ticket_RouteProperetiesId",
-                table: "Ticket",
-                column: "RouteProperetiesId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Ticket_SeatId",
@@ -244,13 +232,13 @@ namespace DAl.Impl.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "RoutePropereties");
+
+            migrationBuilder.DropTable(
                 name: "Ticket");
 
             migrationBuilder.DropTable(
                 name: "Passanger");
-
-            migrationBuilder.DropTable(
-                name: "RoutePropereties");
 
             migrationBuilder.DropTable(
                 name: "Seat");

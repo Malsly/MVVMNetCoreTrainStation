@@ -27,17 +27,17 @@ namespace DAl.Impl.Mappers
                 {
                     Id = dto.Id,
                     Price = dto.Price,
-                    Passanger = UoW.Passangers.GetByID(dto.PassangerId),
-                    Van = UoW.Vans.GetByID(dto.VanId),
-                    Train = UoW.Trains.GetByID(dto.TrainId),
-                    Seat = UoW.Seats.GetByID(dto.SeatId)
+                    PassangerId = dto.PassangerId,
+                    VanId = dto.VanId,
+                    TrainId = dto.TrainId,
+                    SeatId = dto.SeatId
         };
             entity.Id = dto.Id;
             entity.Price = dto.Price;
-            entity.Passanger = UoW.Passangers.GetByID(dto.PassangerId);
-            entity.Van = UoW.Vans.GetByID(dto.VanId);
-            entity.Train = UoW.Trains.GetByID(dto.TrainId);
-            entity.Seat = UoW.Seats.GetByID(dto.SeatId);
+            entity.PassangerId = dto.PassangerId;
+            entity.VanId = dto.VanId;
+            entity.TrainId = dto.TrainId;
+            entity.SeatId = dto.SeatId;
             return entity;
         }   
 

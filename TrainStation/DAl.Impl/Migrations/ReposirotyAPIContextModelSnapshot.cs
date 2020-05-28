@@ -141,9 +141,6 @@ namespace DAl.Impl.Migrations
                     b.Property<int>("SeatId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("StationId")
-                        .HasColumnType("int");
-
                     b.Property<int>("TrainId")
                         .HasColumnType("int");
 
@@ -155,8 +152,6 @@ namespace DAl.Impl.Migrations
                     b.HasIndex("PassangerId");
 
                     b.HasIndex("SeatId");
-
-                    b.HasIndex("StationId");
 
                     b.HasIndex("TrainId");
 
@@ -247,10 +242,6 @@ namespace DAl.Impl.Migrations
                         .HasForeignKey("SeatId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Entities.Station", "Station")
-                        .WithMany()
-                        .HasForeignKey("StationId");
 
                     b.HasOne("Entities.Train", "Train")
                         .WithMany()

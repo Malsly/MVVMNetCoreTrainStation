@@ -21,6 +21,18 @@ namespace ViewModels.Impl
         IPassangerService passangerService;
         IClassProperetiesService classProperetiesService;
 
+        public StationViewModel() 
+        {
+            stationService = new StationService();
+            trainService = new TrainService();
+            vanService = new VanService();
+            seatService = new SeatService();
+            passangerService = new PassangerService();
+            classProperetiesService = new ClassProperetiesService();
+            ticketService = new TicketService();
+
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
         {
@@ -122,7 +134,6 @@ namespace ViewModels.Impl
         public void LoadStations()
         {
 
-            stationService = new StationService();
             ObservableCollection<StationDTO> stations = new ObservableCollection<StationDTO>();
             foreach (StationDTO station in stationService.GetAll().Data.ToList<StationDTO>()) stations.Add(station);
 
@@ -131,7 +142,6 @@ namespace ViewModels.Impl
         public void RefreshTrains()
         {
 
-            trainService = new TrainService();
             ObservableCollection<TrainDTO> trains = new ObservableCollection<TrainDTO>();
             foreach (TrainDTO train in trainService.GetAll().Data.ToList<TrainDTO>())
             {
@@ -147,7 +157,6 @@ namespace ViewModels.Impl
         public void RefreshVans()
         {
 
-            vanService = new VanService();
             ObservableCollection<VanDTO> vans = new ObservableCollection<VanDTO>();
             foreach (VanDTO van in vanService.GetAll().Data.ToList<VanDTO>())
             {
@@ -163,7 +172,6 @@ namespace ViewModels.Impl
         public void RefreshSeats()
         {
 
-            seatService = new SeatService();
             ObservableCollection<SeatDTO> seats = new ObservableCollection<SeatDTO>();
             foreach (SeatDTO seat in seatService.GetAll().Data.ToList<SeatDTO>())
             {
@@ -179,8 +187,6 @@ namespace ViewModels.Impl
 
         public void RefreshPassangers()
         {
-
-            passangerService = new PassangerService();
 
             PassangerDTO passanger = new PassangerDTO()
             {
@@ -199,19 +205,16 @@ namespace ViewModels.Impl
 
         public void RefreshTickets()
         {
-            stationService = new StationService();
-            trainService = new TrainService();
-            vanService = new VanService();
-            seatService = new SeatService();
-
-            classProperetiesService = new ClassProperetiesService();
-            ticketService = new TicketService();
-
+            
             int price = trainService.Get(SelectedTrainId).Data.RoutePropereties.Last().Price;
             VanDTO neededVan = vanService.Get(SelectedVanId).Data;
 
             int idClass = neededVan.ClassProperetiesId;
             price += classProperetiesService.Get(idClass).Data.Price;
+
+            int passangerId = passangerService.GetAll()
+                .Data.Last().Id;
+
 
             TicketDTO ticket = new TicketDTO()
             {
@@ -219,7 +222,7 @@ namespace ViewModels.Impl
                 SeatId = SelectedSeatId,
                 TrainId = SelectedTrainId,
                 Price = price,
-                PassangerId = Passanger.Id
+                PassangerId = passangerId
             };
 
             SelectedStation = stationService.Get(SelectedStationId).Data;
@@ -228,6 +231,8 @@ namespace ViewModels.Impl
             SelectedSeat = seatService.Get(SelectedSeatId).Data;
 
             ticketService.Add(ticket);
+
+            ticketService.Save();
 
             Ticket = ticket;
             OnPropertyChanged(nameof(SelectedStation));

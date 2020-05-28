@@ -10,8 +10,8 @@ using ReposirotyAPI.Data;
 namespace DAl.Impl.Migrations
 {
     [DbContext(typeof(ReposirotyAPIContext))]
-    [Migration("20200528013549_UpdateTrainV2.0")]
-    partial class UpdateTrainV20
+    [Migration("20200528121455_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -102,7 +102,7 @@ namespace DAl.Impl.Migrations
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("VanId")
+                    b.Property<int>("VanId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -140,9 +140,6 @@ namespace DAl.Impl.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("RouteProperetiesId")
-                        .HasColumnType("int");
-
                     b.Property<int>("SeatId")
                         .HasColumnType("int");
 
@@ -155,8 +152,6 @@ namespace DAl.Impl.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("PassangerId");
-
-                    b.HasIndex("RouteProperetiesId");
 
                     b.HasIndex("SeatId");
 
@@ -229,9 +224,11 @@ namespace DAl.Impl.Migrations
 
             modelBuilder.Entity("Entities.Seat", b =>
                 {
-                    b.HasOne("Entities.Van", null)
+                    b.HasOne("Entities.Van", "Van")
                         .WithMany("Seats")
-                        .HasForeignKey("VanId");
+                        .HasForeignKey("VanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Entities.Ticket", b =>
@@ -239,12 +236,6 @@ namespace DAl.Impl.Migrations
                     b.HasOne("Entities.Passanger", "Passanger")
                         .WithMany()
                         .HasForeignKey("PassangerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Entities.RoutePropereties", "RoutePropereties")
-                        .WithMany()
-                        .HasForeignKey("RouteProperetiesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
